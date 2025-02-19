@@ -1,0 +1,114 @@
+.projects-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.projects-container {
+   
+    background-color: #1C1C24;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.project-card {
+    border: 3px solid #454575;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    
+}
+
+.project-card:hover {
+    
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(55, 51, 111, 0.3);
+   
+}
+
+.project-title {
+    font-size: clamp(14px, 1.8vw, 14px);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1em;
+    line-height: 1.875;
+    font-weight: 150;
+    
+}
+
+.project-card a {
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-title {
+        font-size: 26px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .project-title {
+        font-size: 16px;
+    }
+
+    .project-description {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-title {
+        font-size: 22px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .project-title {
+        font-size: 14px;
+    }
+
+    .project-description {
+        font-size: 9px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+}

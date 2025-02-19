@@ -1,0 +1,135 @@
+.about-container {
+    height: auto;
+    background-color: #1C1C24;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+   
+    box-sizing: border-box;
+}
+
+.about-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+    max-width: 100%;
+}
+
+.skill-box {
+    border: 3px solid #454575;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(55, 51, 111, 0.3);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+   
+}
+
+li {
+    color:#dedede;
+    border-radius: 10px;
+    border: 3px solid #454575;
+    background: transparent;
+    padding: 10px;
+    margin: 5px 0;
+    transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
+    text-align: center;
+    width: 100%;
+}
+
+li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(55, 51, 111, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .skill-box {
+        padding: 10px;
+    }
+    ul {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-heading {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 1.3rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .skill-box {
+        padding: 8px;
+    }
+    ul {
+        width: 100%;
+    }
+}

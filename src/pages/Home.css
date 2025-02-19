@@ -1,0 +1,153 @@
+.landing-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1C1C24;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.landing-content {
+    max-width: 600px;
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+.title-text {
+    text-transform: uppercase;
+    color: rgb(140, 112, 255);
+    font-family: "Source Sans 3", sans-serif;
+    letter-spacing: 0.2rem;
+    width: calc(100% + 1.2rem);
+    font-size: 0.999em;
+    line-height: 1.725;
+    font-weight: 600;
+}
+
+.emphasized {
+    color: #dedede;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.typing-effect {
+    color: rgb(255, 255, 255);
+    font-family: "Source Sans 3", sans-serif;
+    letter-spacing: 0.025rem;
+    width: calc(100% + 0.095rem);
+    font-size: 3.25em;
+    line-height: 1.25;
+    font-weight: 600;
+}
+   
+
+
+.intro-text {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1em;
+    line-height: 1.875;
+    font-weight: 300;
+}
+
+.button-group {
+   
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    background: rgb(150, 125, 255);
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    position: relative;
+ 
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease-in-out forwards;
+}
+
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+.action-btn:hover {
+    letter-spacing: 3px;
+  background-color: hsl(261, 62%, 49%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+.action-btn:active {
+    letter-spacing: 3px;
+  background-color: hsl(261, 50%, 57%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(123, 96, 175) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+   
+}
+
+.icon-links {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.icon-links a {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-links a:hover {
+    transform: scale(1.2);
+    color: rgb(140, 112, 255);
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .title-text {
+        font-size: 32px;
+    }
+    .typing-effect {
+        font-size: 20px;
+    }
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
