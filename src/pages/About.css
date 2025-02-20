@@ -10,7 +10,7 @@
 }
 
 .about-heading {
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
     font-weight: bold;
     color: rgb(255, 255, 255);
     margin-bottom: 20px;
@@ -18,7 +18,7 @@
 }
 
 .section-title {
-    font-size: clamp(1.3rem, 4vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
     margin: 20px 0;
     color: rgb(255, 255, 255);
     position: relative;
@@ -28,7 +28,7 @@
 .skills-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     justify-content: center;
     padding: 10px 0;
@@ -39,10 +39,21 @@
     border: 3px solid #454575;
     background: transparent;
     color: rgb(255, 255, 255);
-    padding: clamp(10px, 3vw, 15px);
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.skill-box p {
+    margin: 10px 0 0;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    word-wrap: break-word;
 }
 
 .skill-box:hover {
@@ -51,7 +62,7 @@
 }
 
 .skill-icon {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -61,12 +72,12 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 70%;
     max-width: 900px;
     margin: 0 auto;
     list-style: none;
     padding: 0;
-    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-size: 1.2rem;
 }
 
 li {
@@ -79,8 +90,6 @@ li {
     transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
     text-align: center;
     width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
 li:hover {
@@ -100,23 +109,43 @@ li:hover {
 }
 
 @media (max-width: 768px) {
+    .about-heading {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .skill-box {
+        padding: 10px;
+        min-height: 80px;
+    }
+    .skill-box p {
+        font-size: 1rem;
+    }
+    ul {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-heading {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 1.3rem;
+    }
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
     .skill-box {
         padding: 10px;
+        min-height: 70px;
     }
-    ul {
-        width: 95%;
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    }
-    .skill-box {
-        padding: 8px;
+    .skill-box p {
+        font-size: 0.9rem;
     }
     ul {
         width: 100%;
