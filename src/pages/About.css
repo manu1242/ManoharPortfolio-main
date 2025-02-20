@@ -1,5 +1,5 @@
 .about-container {
-    width:100vw;
+    width:100%;
     height: auto;
     background-color: #1C1C24;
     margin: auto;
@@ -28,7 +28,7 @@
 
 
 .skills-grid {
-    width:100vw;
+    width:100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
